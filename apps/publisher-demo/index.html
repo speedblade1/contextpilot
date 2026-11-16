@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Moonlit Journal — Publisher integration</title>
+    <style>
+      body {
+        font:
+          17px/1.8 Georgia,
+          serif;
+        color: #3c3155;
+        background: #faf7ff;
+        margin: 0;
+      }
+      header,
+      main,
+      footer {
+        max-width: 900px;
+        margin: auto;
+        padding: 25px;
+      }
+      header {
+        border-bottom: 1px solid #ddd3ec;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header strong {
+        font-size: 26px;
+      }
+      small,
+      nav,
+      button,
+      label,
+      footer {
+        font-family: system-ui;
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 1.15;
+        letter-spacing: -1.5px;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 36px;
+      }
+      aside {
+        border: 1px solid #ddd3ec;
+        background: #f0e9f9;
+        border-radius: 10px;
+        padding: 22px;
+        font: 14px/1.6 system-ui;
+      }
+      aside h3 {
+        font-size: 22px;
+      }
+      aside a {
+        color: #765399;
+        font-weight: 700;
+      }
+      label {
+        display: block;
+        margin: 16px 0;
+      }
+      select,
+      button {
+        padding: 8px;
+      }
+      footer {
+        border-top: 1px solid #ddd3ec;
+      }
+      a {
+        color: #765399;
+      }
+      @media (max-width: 650px) {
+        main {
+          display: block;
+        }
+        h1 {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>Moonlit Journal<span style="color: #9e86b8">.</span></strong>
+      <nav>IDEAS FOR CURIOUS BUILDERS</nav>
+    </header>
+    <main>
+      <article>
+        <small>DEVELOPMENT / 8 MIN READ</small>
+        <h1>The best way to learn?<br />Build something small.</h1>
+        <p>
+          Good software starts with a question. What would happen if we took one
+          useful idea and made it work, end to end?
+        </p>
+        <p>
+          Programming is a craft learned through practice. A small working
+          project teaches us about data, boundaries, and the connections between
+          systems.
+        </p>
+        <h2>Make the feedback loop shorter</h2>
+        <p>
+          Write a function. Test the behavior. Connect it to a simple interface.
+          When each step is visible, software becomes easier to understand and
+          improve.
+        </p>
+        <p>
+          This preview shows your active campaigns in context: the ad
+          is selected from this page's technology category and software
+          keywords. No browsing history or personal profile is used.
+        </p>
+      </article>
+      <section>
+        <label>Publisher placement <select id="publisher"><option value="byte-journal">Moonlit Journal</option></select></label>
+        <small id="placement-context">Technology · programming, software</small>
+        <label
+          >Preview country
+          <select id="country">
+            <option value="DE">Germany</option>
+            <option value="FR">France</option>
+            <option value="GB">United Kingdom</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+          </select></label
+        >
+        <div id="ad-container"></div>
+        <p><button id="refresh">Refresh contextual ad</button></p>
+      </section>
+    </main>
+    <footer>
+      Your publisher preview · ContextPilot ·
+      <a href="http://localhost:5173">Campaign dashboard ↗</a>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

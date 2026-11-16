@@ -1,0 +1,20 @@
+{
+  "name": "@contextpilot/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@contextpilot/shared": "1.0.0",
+    "@tanstack/react-query": "^5.90.7",
+    "@tailwindcss/vite": "^4.1.16",
+    "@vitejs/plugin-react": "^5.1.0",
+    "vite": "^7.2.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.5",
+    "tailwindcss": "^4.1.16"
+  }
+}

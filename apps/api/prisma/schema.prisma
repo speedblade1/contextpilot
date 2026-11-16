@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+model Publisher {
+  id String @id
+  name String
+  category String
+  siteUrl String?
+}
+model Campaign {
+  id String @id @default(cuid())
+  ownerId String @default("local-demo")
+  data String
+  status String @default("DRAFT")
+  version Int @default(0)
+  createdAt DateTime @default(now())
+  impressions Int @default(0)
+  spentCents Int @default(0)
+  servedRequests Int @default(0)
+  messages Message[]
+}
+model Message {
+  id Int @id @default(autoincrement())
+  campaignId String
+  role String
+  content String
+  campaign Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+}
