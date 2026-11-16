@@ -1,4 +1,4 @@
-# ContextPilot · Moonlit workspace
+# ContextPilot 
 
 Your personal campaign studio: a soft lavender interface, a real OpenAI assistant, persistent campaigns, and contextual placements on your own publisher pages.
 
@@ -83,16 +83,6 @@ npm run test:e2e
 
 Unit/API tests use `test.db`. Browser tests use `e2e.db` and separate ports 4100/5273/5274, with a deterministic injected provider and no API keys. They do not edit your personal database or interrupt your app. Live OpenAI verification is separate and requires your key.
 
-## Project map
-
-- `apps/web`: React dashboard, builder, publisher management, workspace settings and animated theme.
-- `apps/api`: Express routes, database, validation, OpenAI adapter and contextual matching.
-- `apps/publisher-demo`: local publisher preview (folder name retained for workspace compatibility).
-- `packages/sdk`: dependency-free publisher integration with safe DOM rendering and disposal.
-- `packages/shared`: shared campaign contracts.
-- `tests`: API, provider, SDK, UI and browser checks.
-
-Study `packages/shared/src/index.ts`, `apps/api/src/services/campaigns.ts`, `apps/api/src/ai/openai.ts`, and `packages/sdk/src/index.ts` first. The original learning documents in `docs/` explain the foundational architecture; this README and `docs/PERSONAL-WORKSPACE.md` describe the personalized version and supersede the original fixture setup.
 
 ## Screenshots
 
